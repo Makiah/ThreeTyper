@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ThreeTyper</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+		<style>
+		</style>
+	</head>
+
+	<body>
+		<div id="computerBorder"> 
+			<div id="desktopBackground">
+				<div class="desktopIcon interactableButton" onclick="openPopupWindow('textEditor'); typeContentsOf('loremipsum');">
+					<img src="./images/pdficon.png"/>
+					<p>Lorem Ipsum</p>
+				</div>
+
+				<div class="desktopIcon interactableButton" onclick="openPopupWindow('textEditor'); typeContentsOf('gettysburgaddress');">
+					<img src="./images/pdficon.png"/>
+					<p>Gettysburg Address</p>
+				</div>
+
+				<div class="desktopIcon interactableButton" onclick="openPopupWindow('textEditor'); typeContentsOf('beemovie');">
+					<img src="./images/pdficon.png"/>
+					<p>Bee Movie</p>
+				</div>
+
+				<div class="desktopIcon interactableButton" onclick="openGithub()">
+					<img src="./images/htmlicon.png"/>
+					<p>Source</p>
+				</div>
+
+				<!-- Text Editor Popup (default) -->
+				<div id="textEditor" class="popupWindow">
+					<div class="windowHeader">
+						<div class="windowHeaderTitle">
+							<p id="windowHeaderTitleP">...</p>
+						</div>
+						<p class="windowHeaderMinimize interactableButton windowHeaderOption" onclick="closePopupWindow('textEditor')">—</p>
+						<p class="windowHeaderFullscreen interactableButton windowHeaderOption" onclick="toggleResizePopup('textEditor')">O</p>
+						<p class="windowHeaderClose interactableButton windowHeaderOption" onclick="closePopupWindow('textEditor')">X</p>
+					</div>
+					<div class="windowBody">
+						<ol id="textEditorOL">
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div id="typingBackground"></div>
+
+		<script src="./three.min.js"></script>
+		<script src="./GLTFLoader.js"></script>
+		<script src="./source.js"></script>
+	</body>
+</html>

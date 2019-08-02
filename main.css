@@ -1,0 +1,189 @@
+body {
+	height: 100vh;
+	background-color: rgb(221, 221, 221);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+p, li, button, input, label {
+	font-family: "Helvetica";
+	font-weight: lighter;
+	cursor: default;
+}
+
+#typingBackground {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	pointer-events: none;
+}
+
+#staticContentWrapper {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+#computerBorder {
+	background: white;
+	z-index: 0;
+	margin: auto;
+	max-width: 1000px;
+	width: calc(100% - 20px);
+	height: calc(70% - 25px);
+	border: 10px solid #404040;
+	border-radius: 10px;
+	overflow: scroll;
+}
+
+.interactableButton:hover {
+	opacity: 0.7;
+}
+
+.interactableButton:active {
+	opacity: 0.5;
+}
+
+#desktopBackground {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+.desktopIcon {
+	width: 66px;
+	height: 100px;
+	text-align: center;
+	padding: 10px;
+	float: left;
+	z-index: 4;
+}
+
+.desktopIcon img {
+	width: 66px;
+	height: auto;
+	margin: auto;
+}
+
+.desktopIcon p {
+	width: 66px;
+	height: 34px;
+	font-size: 12px;
+}
+
+.popupWindow {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 9;
+}
+
+#textEditor {
+}
+
+.windowHeader {
+	position: relative;
+	width: 100%;
+	height: 25px;
+	background-color: grey;
+	text-align: center;
+	line-height: 25px;
+	box-shadow: 0 1px 0 0 rgb(53, 53, 53);
+	margin-bottom: 1px;
+}
+
+.windowHeader>* {
+	float: left;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.windowHeaderTitle {
+	width: calc(100% - 150px);
+	color: white;
+}
+
+.windowHeaderTitle p {
+}
+
+.windowHeaderTitle input {
+	width: calc(100% - 2px);
+	height: calc(100% - 2px);
+	border: 1px solid grey;
+	text-align: center;
+	font-size: 16px;
+}
+
+.windowHeaderOption {
+	width: 50px;
+	font-size: 12px;
+	color: white;
+}
+
+.windowHeaderMinimize {
+	background-color: rgb(223, 223, 0);
+}
+
+.windowHeaderFullscreen {
+	background-color: orange;
+}
+
+.windowHeaderClose {
+	background-color: red;
+}
+
+.windowBody {
+	height: calc(100% - 26px);
+	background-color: rgb(20, 20, 20);
+	overflow: scroll;
+}
+
+#textEditorOL {
+	display: block;
+	list-style-type: decimal;
+	list-style: none;
+	counter-reset: item;
+	width: 100%;
+	box-shadow: 0 2px 0 0 rgb(87, 87, 87);
+}
+
+#textEditorOL li {
+	counter-increment: item;
+	width: 100%;
+	color: rgb(238, 238, 238);
+	background-color: rgb(99, 99, 99);
+	font-size: 16px;
+}
+
+#textEditorOL li:before {
+	margin-right: 10px;
+	content: counter(item);
+	background: rgb(85, 85, 85);
+	border-right: 1px solid white;
+	color: white;
+	width: 1.2em;
+	text-align: center;
+	display: inline-block;
+}
+
+#textEditorOL button {
+	background-color: rgb(76, 175, 80); /* Green */
+	border: 2px solid rgb(76, 175, 80);
+	border-radius: 3px;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
